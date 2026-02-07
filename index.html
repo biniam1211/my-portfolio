@@ -4,135 +4,157 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biniam Efrem | Frontend Developer</title>
+  <title>Biniam Efrem | AI & Cybersecurity Engineer</title>
+  <meta name="description" content="AI & Cybersecurity Engineer at MindHYVE.ai — building intelligent, secure digital solutions.">
   <link rel="icon" href="./assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b1b8fcb36d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- Floating nav -->
+  <!-- ═══ CURSOR GLOW ═══ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
   <nav id="navbar">
-    <figure>
-      <img id="personal-logo" src="./assets/favicon.png" alt="Logo">
-    </figure>
-    <ul class="nav__link--list">
-      <li class="nav__link"><a href="#about" class="nav__link--anchor">About</a></li>
-      <li class="nav__link"><a href="#projects" class="nav__link--anchor">Projects</a></li>
-      <li class="nav__link"><a href="#contact" class="nav__link--anchor">Contact</a></li>
-      <li class="nav__link">
-        <a href="#" class="nav__link--anchor" id="theme-toggle" onclick="toggleTheme(); return false;" aria-label="Toggle dark mode">
-          <i class="fa-solid fa-moon"></i>
-        </a>
-      </li>
+    <a href="#hero" class="nav__logo">
+      <img src="./assets/favicon.png" alt="BE" id="personal-logo">
+      <span class="nav__logo-text">BE<span class="accent-dot">.</span></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#about" class="nav__link">About</a></li>
+      <li><a href="#experience" class="nav__link">Experience</a></li>
+      <li><a href="#projects" class="nav__link">Projects</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
     </ul>
+    <div class="nav__actions">
+      <button id="theme-toggle" class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a href="./assets/Biniam efrem Resume.pdf" target="_blank" class="btn btn--sm btn--accent">Resume</a>
+    </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- ═══ HERO ═══ -->
   <section id="hero">
-    <div class="hero__bg-particles" id="particles"></div>
+    <canvas id="particleCanvas"></canvas>
     <div class="hero__content">
-      <p class="hero__greeting reveal">Hey there, I'm</p>
-      <h1 class="hero__name reveal">
-        <span class="gradient-text">Biniam Efrem</span>
+      <div class="hero__badge reveal">
+        <span class="pulse-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero__heading reveal">
+        <span class="hero__line">I build</span>
+        <span class="hero__line gradient-text">intelligent & secure</span>
+        <span class="hero__line">digital experiences.</span>
       </h1>
-      <h2 class="hero__title reveal">
-        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
-      </h2>
-      <p class="hero__bio reveal">
-        I build beautiful, fast, and accessible web experiences.
+      <p class="hero__sub reveal">
+        <span class="accent-text">AI & Cybersecurity Engineer</span> at
+        <a href="https://mindhyve.ai" target="_blank" class="hero__company">MindHYVE.ai</a>
+        — crafting next-generation AGI solutions and fortifying digital infrastructure.
       </p>
-      <div class="hero__cta reveal">
-        <a href="#projects" class="btn btn--primary">View My Work</a>
-        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      <div class="hero__actions reveal">
+        <a href="#projects" class="btn btn--primary">
+          <span>View Projects</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn--ghost">
+          <span>Let's Talk</span>
+        </a>
       </div>
       <div class="hero__socials reveal">
-        <a href="https://www.linkedin.com/in/biniam-efrem-910aab209/" target="_blank" class="social__link" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/biniam-efrem-910aab209/" target="_blank" class="social-icon" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="https://github.com/biniam1211" target="_blank" class="social__link" aria-label="GitHub">
+        <a href="https://github.com/biniam1211" target="_blank" class="social-icon" aria-label="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="./assets/Biniam efrem Resume.pdf" target="_blank" class="social__link" aria-label="Resume">
-          <i class="fa-solid fa-file-pdf"></i>
+        <a href="mailto:biniamefrem1211@gmail.com" class="social-icon" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
     </div>
-    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-      <div class="scroll__icon"></div>
-    </a>
+    <div class="hero__scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
   </section>
 
-  <!-- About -->
+  <!-- ═══ ABOUT ═══ -->
   <section id="about">
     <div class="container">
-      <div class="row">
-        <h2 class="section__title reveal">
-          About <span class="gradient-text">Me</span>
-        </h2>
-        <div class="about__content">
-          <div class="about__text reveal">
-            <p class="about__para">
-              I'm a passionate <strong>Frontend Software Engineer</strong> who loves creating clean,
-              responsive, and user-friendly web applications. I enjoy turning complex problems
-              into simple, beautiful, and intuitive designs.
-            </p>
-            <p class="about__para">
-              With experience in modern web technologies, I focus on writing clean,
-              maintainable code and building applications that provide great user experiences.
-              I'm always eager to learn new technologies and push my skills further.
-            </p>
+      <div class="section-label reveal">
+        <span class="section-number">01.</span>
+        <span>About Me</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <h2 class="about__heading">
+            From frontend to the <span class="gradient-text">frontier of AI</span>.
+          </h2>
+          <p class="about__para">
+            I'm an <strong>AI & Cybersecurity Engineer</strong> working at the intersection
+            of artificial intelligence, security, and software engineering. Currently at
+            <strong>MindHYVE.ai</strong> and <strong>DV8 Infosystems</strong> in Newport Beach, CA,
+            where I contribute to building domain-specific AGI agents and secure digital infrastructure.
+          </p>
+          <p class="about__para">
+            My journey started in frontend development and evolved into AI and cybersecurity engineering.
+            I bring a unique perspective — combining user-facing design sensibility with deep technical
+            expertise in AI systems, cloud architecture, and security protocols.
+          </p>
+          <div class="about__languages">
+            <h4>Languages I Speak</h4>
+            <div class="lang-tags">
+              <span class="lang-tag">English</span>
+              <span class="lang-tag">Amharic <small>(Native)</small></span>
+              <span class="lang-tag">Tigrinya <small>(Native)</small></span>
+              <span class="lang-tag">Spanish</span>
+            </div>
           </div>
-          <div class="about__skills reveal">
-            <h3 class="about__skills--title">My Tech Stack</h3>
-            <div class="skills__list">
-              <div class="skill" data-tooltip="HTML5">
-                <div class="skill__card">
-                  <i class="fa-brands fa-html5"></i>
-                </div>
-                <span class="skill__name">HTML5</span>
+        </div>
+        <div class="about__skills reveal">
+          <h3 class="skills-heading">Tech Arsenal</h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4 class="skill-category__title"><i class="fa-solid fa-code"></i> Frontend</h4>
+              <div class="skill-pills">
+                <span class="skill-pill">HTML5</span>
+                <span class="skill-pill">CSS3</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">Bootstrap</span>
               </div>
-              <div class="skill" data-tooltip="CSS3">
-                <div class="skill__card">
-                  <i class="fa-brands fa-css3-alt"></i>
-                </div>
-                <span class="skill__name">CSS3</span>
+            </div>
+            <div class="skill-category">
+              <h4 class="skill-category__title"><i class="fa-solid fa-brain"></i> AI / ML</h4>
+              <div class="skill-pills">
+                <span class="skill-pill">AWS Bedrock</span>
+                <span class="skill-pill">LLMs</span>
+                <span class="skill-pill">Prompt Engineering</span>
+                <span class="skill-pill">AGI Systems</span>
               </div>
-              <div class="skill" data-tooltip="JavaScript">
-                <div class="skill__card">
-                  <i class="fa-brands fa-js"></i>
-                </div>
-                <span class="skill__name">JavaScript</span>
+            </div>
+            <div class="skill-category">
+              <h4 class="skill-category__title"><i class="fa-solid fa-shield-halved"></i> Security</h4>
+              <div class="skill-pills">
+                <span class="skill-pill">Cybersecurity</span>
+                <span class="skill-pill">Threat Detection</span>
+                <span class="skill-pill">Cloud Security</span>
               </div>
-              <div class="skill" data-tooltip="React">
-                <div class="skill__card">
-                  <i class="fa-brands fa-react"></i>
-                </div>
-                <span class="skill__name">React</span>
-              </div>
-              <div class="skill" data-tooltip="Git">
-                <div class="skill__card">
-                  <i class="fa-brands fa-git-alt"></i>
-                </div>
-                <span class="skill__name">Git</span>
-              </div>
-              <div class="skill" data-tooltip="GitHub">
-                <div class="skill__card">
-                  <i class="fa-brands fa-github"></i>
-                </div>
-                <span class="skill__name">GitHub</span>
-              </div>
-              <div class="skill" data-tooltip="npm">
-                <div class="skill__card">
-                  <i class="fa-brands fa-npm"></i>
-                </div>
-                <span class="skill__name">npm</span>
-              </div>
-              <div class="skill" data-tooltip="Terminal">
-                <div class="skill__card">
-                  <i class="fa-solid fa-terminal"></i>
-                </div>
-                <span class="skill__name">Terminal</span>
+            </div>
+            <div class="skill-category">
+              <h4 class="skill-category__title"><i class="fa-solid fa-gear"></i> Tools</h4>
+              <div class="skill-pills">
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">AWS CDK</span>
+                <span class="skill-pill">CLI</span>
+                <span class="skill-pill">npm</span>
               </div>
             </div>
           </div>
@@ -141,216 +163,393 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-number">02.</span>
+        <span>Experience & Credentials</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="exp__grid">
+
+        <!-- Timeline -->
+        <div class="timeline reveal">
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <h3>AI & Cybersecurity Engineer</h3>
+                <span class="timeline__company">MindHYVE.ai</span>
+              </div>
+              <span class="timeline__date">2024 — Present</span>
+              <p>Building domain-specific AGI agents and secure AI infrastructure. Working on autonomous cybersecurity threat detection and agentic AI systems powered by HYVE-Fusion cognitive engine.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <h3>Engineer</h3>
+                <span class="timeline__company">DV8 Infosystems</span>
+              </div>
+              <span class="timeline__date">Irvine, CA</span>
+              <p>Contributing to AI-powered software solutions, cloud services, and cybersecurity infrastructure. Working on industry-specific AI systems for healthcare, legal, and education sectors.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <h3>Frontend Developer</h3>
+                <span class="timeline__company">Freelance / Projects</span>
+              </div>
+              <span class="timeline__date">2022 — 2024</span>
+              <p>Built responsive web applications and client projects. Developed task management apps, calculators, and professional landing pages using HTML, CSS, JavaScript, and React.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certs reveal">
+          <h3 class="certs__title">Certifications</h3>
+          <div class="certs__list">
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fa-brands fa-google"></i></div>
+              <div class="cert-info">
+                <h4>Google AI Essentials</h4>
+                <span>Google / Coursera — 2025</span>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fa-brands fa-js"></i></div>
+              <div class="cert-info">
+                <h4>JavaScript Certification</h4>
+                <span>W3Schools — 2022</span>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fa-brands fa-bootstrap"></i></div>
+              <div class="cert-info">
+                <h4>Bootstrap</h4>
+                <span>Codecademy — 2022</span>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fa-solid fa-terminal"></i></div>
+              <div class="cert-info">
+                <h4>Command Line & Code Foundations</h4>
+                <span>Codecademy — 2022</span>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fa-brands fa-html5"></i></div>
+              <div class="cert-info">
+                <h4>HTML, CSS & JavaScript</h4>
+                <span>Codecademy — 2022</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
   <section id="projects">
     <div class="container">
-      <div class="row">
-        <h2 class="section__title reveal">
-          Featured <span class="gradient-text">Projects</span>
-        </h2>
-        <div class="projects__grid">
+      <div class="section-label reveal">
+        <span class="section-number">03.</span>
+        <span>Featured Work</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects__grid">
 
-          <div class="project__card reveal">
-            <div class="project__img-wrapper">
-              <img src="./assets/todolist.png" class="project__img" alt="To Do List App">
-              <div class="project__overlay">
-                <div class="project__overlay--links">
-                  <a href="https://github.com/biniam1211/Generation_Todo_List_App" target="_blank" class="project__overlay--link" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://todolistapp-biniam1211.vercel.app/" target="_blank" class="project__overlay--link" aria-label="Live Demo">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project__info">
-              <h3 class="project__title">To Do List App</h3>
-              <p class="project__description">A task management app with add, edit, and delete functionality. Features completion tracking and a clean UI.</p>
-              <div class="project__tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">ES6</span>
-              </div>
+        <article class="project-card project-card--featured reveal">
+          <div class="project-card__image">
+            <img src="./assets/todolist.png" alt="Task Management App">
+            <div class="project-card__overlay">
+              <a href="https://todolistapp-biniam1211.vercel.app/" target="_blank" class="overlay-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/biniam1211/Generation_Todo_List_App" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
             </div>
           </div>
-
-          <div class="project__card reveal">
-            <div class="project__img-wrapper">
-              <img src="./assets/calculator.png" class="project__img" alt="Calculator">
-              <div class="project__overlay">
-                <div class="project__overlay--links">
-                  <a href="https://github.com/biniam1211/calculator.git" target="_blank" class="project__overlay--link" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://calculator-mu-kohl.vercel.app/" target="_blank" class="project__overlay--link" aria-label="Live Demo">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project__info">
-              <h3 class="project__title">Calculator</h3>
-              <p class="project__description">A fully functional math calculator with a modern interface supporting basic arithmetic operations.</p>
-              <div class="project__tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">ES6</span>
-              </div>
+          <div class="project-card__body">
+            <span class="project-label">Web App</span>
+            <h3>Task Management App</h3>
+            <p>Full-featured task management application with CRUD operations, completion tracking, and a clean user interface built with vanilla JavaScript and ES6.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>ES6</span>
             </div>
           </div>
+        </article>
 
-          <div class="project__card reveal">
-            <div class="project__img-wrapper">
-              <div class="project__img project__img--placeholder">
-                <i class="fa-solid fa-briefcase"></i>
-              </div>
-              <div class="project__overlay">
-                <div class="project__overlay--links">
-                  <a href="https://github.com/biniam1211/my-portfolio" target="_blank" class="project__overlay--link" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project__info">
-              <h3 class="project__title">Portfolio Website</h3>
-              <p class="project__description">My personal portfolio with dark mode, scroll animations, particle effects, and responsive design.</p>
-              <div class="project__tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-              </div>
+        <article class="project-card reveal">
+          <div class="project-card__image">
+            <img src="./assets/calculator.png" alt="Calculator App">
+            <div class="project-card__overlay">
+              <a href="https://calculator-mu-kohl.vercel.app/" target="_blank" class="overlay-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/biniam1211/calculator.git" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
             </div>
           </div>
+          <div class="project-card__body">
+            <span class="project-label">Web App</span>
+            <h3>Calculator</h3>
+            <p>Modern calculator with clean UI supporting arithmetic operations, responsive layout, and keyboard input.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
 
-        </div>
+        <article class="project-card reveal">
+          <div class="project-card__image">
+            <div class="project-placeholder">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <div class="project-card__overlay">
+              <a href="https://github.com/biniam1211/cdk-bedrock-app" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-label">AI / Cloud</span>
+            <h3>AWS Bedrock CDK App</h3>
+            <p>Infrastructure-as-code project leveraging AWS CDK and Amazon Bedrock for deploying AI/ML models in the cloud.</p>
+            <div class="project-tags">
+              <span>TypeScript</span><span>AWS CDK</span><span>Bedrock</span><span>AI</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__image">
+            <div class="project-placeholder project-placeholder--alt">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="project-card__overlay">
+              <a href="https://github.com/biniam1211/oc-landing-page" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-label">Client Work</span>
+            <h3>OC Landing Page</h3>
+            <p>Professional web design landing page for an Orange County client. Clean, conversion-focused design with modern aesthetics.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__image">
+            <div class="project-placeholder project-placeholder--warm">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="project-card__overlay">
+              <a href="https://github.com/biniam1211/The-Angle-BOOK-Club-" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-label">Full Stack</span>
+            <h3>The Angle Book Club</h3>
+            <p>A TypeScript-based book club platform for community reading and discussion.</p>
+            <div class="project-tags">
+              <span>TypeScript</span><span>React</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__image">
+            <div class="project-placeholder project-placeholder--purple">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="project-card__overlay">
+              <a href="https://github.com/biniam1211/my-portfolio" target="_blank" class="overlay-btn">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-label">Portfolio</span>
+            <h3>This Portfolio</h3>
+            <p>Personal portfolio featuring particle effects, dark mode, scroll animations, and responsive design.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- ═══ CONTACT ═══ -->
   <section id="contact">
     <div class="container">
-      <div class="row">
-        <h2 class="section__title reveal">
-          Get In <span class="gradient-text">Touch</span>
+      <div class="section-label reveal">
+        <span class="section-number">04.</span>
+        <span>Get In Touch</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact__content reveal">
+        <h2 class="contact__heading">
+          Let's build something <span class="gradient-text">extraordinary</span>.
         </h2>
-        <p class="contact__subtitle reveal">
-          Have a project in mind or just want to chat? I'd love to hear from you.
+        <p class="contact__sub">
+          Whether you have a project, a question, or just want to connect — my inbox is always open.
         </p>
-        <form id="contact-form" class="contact__form reveal" action="mailto:biniamefrem1211@gmail.com" method="POST" enctype="text/plain">
-          <div class="form__group">
-            <input type="text" id="name" name="name" placeholder=" " required>
-            <label for="name">Your Name</label>
-          </div>
-          <div class="form__group">
-            <input type="email" id="email" name="email" placeholder=" " required>
-            <label for="email">Your Email</label>
-          </div>
-          <div class="form__group">
-            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
-            <label for="message">Your Message</label>
-          </div>
-          <button type="submit" class="btn btn--primary btn--submit">
-            Send Message <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
+        <div class="contact__methods">
+          <a href="mailto:biniamefrem1211@gmail.com" class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <span>biniamefrem1211@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/biniam-efrem-910aab209/" target="_blank" class="contact-card">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/biniam1211" target="_blank" class="contact-card">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+        <div class="contact__form-wrapper">
+          <form action="mailto:biniamefrem1211@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+            <div class="form-row">
+              <div class="form-field">
+                <input type="text" name="name" id="name" placeholder=" " required>
+                <label for="name">Name</label>
+              </div>
+              <div class="form-field">
+                <input type="email" name="email" id="email" placeholder=" " required>
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="form-field">
+              <textarea name="message" id="message" rows="5" placeholder=" " required></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ═══ FOOTER ═══ -->
   <footer>
     <div class="container">
-      <div class="row footer__row">
-        <figure>
-          <img class="footer__logo" src="./assets/favicon.png" alt="Logo">
-        </figure>
-        <div class="footer__links">
-          <a href="https://github.com/biniam1211" target="_blank" class="footer__link">GitHub</a>
-          <a href="https://www.linkedin.com/in/biniam-efrem-910aab209/" target="_blank" class="footer__link">LinkedIn</a>
-          <a href="mailto:biniamefrem1211@gmail.com" class="footer__link">Email</a>
-          <a href="./assets/Biniam efrem Resume.pdf" target="_blank" class="footer__link">Resume</a>
+      <div class="footer__content">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <span class="footer__name">Biniam Efrem<span class="accent-dot">.</span></span>
+            <p>AI & Cybersecurity Engineer</p>
+          </div>
+          <div class="footer__links">
+            <a href="https://github.com/biniam1211" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/biniam-efrem-910aab209/" target="_blank">LinkedIn</a>
+            <a href="mailto:biniamefrem1211@gmail.com">Email</a>
+            <a href="./assets/Biniam efrem Resume.pdf" target="_blank">Resume</a>
+          </div>
         </div>
-        <p class="footer__copyright">&copy; 2026 Biniam Efrem. All rights reserved.</p>
+        <div class="footer__bottom">
+          <p>&copy; 2026 Biniam Efrem. Engineered with purpose.</p>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Floating mail button -->
-  <a href="mailto:biniamefrem1211@gmail.com" class="fab" aria-label="Send email">
+  <!-- ═══ FAB ═══ -->
+  <a href="mailto:biniamefrem1211@gmail.com" class="fab" aria-label="Email me">
     <i class="fa-solid fa-envelope"></i>
   </a>
 
   <script>
-    // ---- Dark Mode ----
+    /* === Theme Toggle === */
     function toggleTheme() {
-      document.body.classList.toggle('dark');
+      document.body.classList.toggle('light');
       const icon = document.querySelector('#theme-toggle i');
-      const isDark = document.body.classList.contains('dark');
-      icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      const isLight = document.body.classList.contains('light');
+      icon.className = isLight ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
     }
-    (function loadTheme() {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark');
-        const icon = document.querySelector('#theme-toggle i');
-        if (icon) icon.className = 'fa-solid fa-sun';
+    (function() {
+      if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light');
+        const i = document.querySelector('#theme-toggle i');
+        if (i) i.className = 'fa-solid fa-moon';
+      } else {
+        const i = document.querySelector('#theme-toggle i');
+        if (i) i.className = 'fa-solid fa-sun';
       }
     })();
 
-    // ---- Typewriter ----
-    const phrases = ['Frontend Developer', 'UI/UX Enthusiast', 'Problem Solver', 'Creative Coder'];
-    let phraseIdx = 0, charIdx = 0, deleting = false;
-    const typewriterEl = document.getElementById('typewriter');
-    function type() {
-      const current = phrases[phraseIdx];
-      typewriterEl.textContent = current.substring(0, charIdx);
-      if (!deleting) {
-        charIdx++;
-        if (charIdx > current.length) { deleting = true; setTimeout(type, 1800); return; }
-      } else {
-        charIdx--;
-        if (charIdx < 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; setTimeout(type, 400); return; }
-      }
-      setTimeout(type, deleting ? 40 : 80);
-    }
-    type();
+    /* === Typewriter in hero (rotating words) === */
+    /* Not needed anymore — replaced with static headline */
 
-    // ---- Scroll reveal ----
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); } });
-    }, { threshold: 0.15 });
-    reveals.forEach(el => revealObserver.observe(el));
+    /* === Scroll Reveal === */
+    const ro = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-    // ---- Navbar scroll effect ----
-    const navbar = document.getElementById('navbar');
+    /* === Navbar === */
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+    /* === Active nav link === */
+    const sections = document.querySelectorAll('section[id]');
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      const y = scrollY + 100;
+      sections.forEach(s => {
+        const top = s.offsetTop, h = s.offsetHeight, id = s.id;
+        const link = document.querySelector(`.nav__link[href="#${id}"]`);
+        if (link) link.classList.toggle('active', y >= top && y < top + h);
+      });
     });
 
-    // ---- Particle background ----
-    (function initParticles() {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      const container = document.getElementById('particles');
-      container.appendChild(canvas);
-      let w, h, particles = [];
-      function resize() { w = canvas.width = container.offsetWidth; h = canvas.height = container.offsetHeight; }
+    /* === Cursor Glow === */
+    const glow = document.getElementById('cursorGlow');
+    if (window.matchMedia('(pointer:fine)').matches) {
+      document.addEventListener('mousemove', e => {
+        glow.style.opacity = '1';
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+      });
+    }
+
+    /* === Particles === */
+    (function() {
+      const c = document.getElementById('particleCanvas');
+      const ctx = c.getContext('2d');
+      let w, h, pts = [];
+      function resize() { w = c.width = c.parentElement.offsetWidth; h = c.height = c.parentElement.offsetHeight; }
       resize(); window.addEventListener('resize', resize);
-      class Particle {
-        constructor() { this.reset(); }
-        reset() {
-          this.x = Math.random() * w;
-          this.y = Math.random() * h;
-          this.vx = (Math.random() - 0.5) * 0.5;
-          this.vy = (Math.random() - 0.5) * 0.5;
-          this.r = Math.random() * 2 + 1;
-          this.alpha = Math.random() * 0.5 + 0.2;
+      class P {
+        constructor() { this.init(); }
+        init() {
+          this.x = Math.random() * w; this.y = Math.random() * h;
+          this.vx = (Math.random() - .5) * .4; this.vy = (Math.random() - .5) * .4;
+          this.r = Math.random() * 1.5 + .5;
         }
         update() {
           this.x += this.vx; this.y += this.vy;
@@ -358,35 +557,25 @@
           if (this.y < 0 || this.y > h) this.vy *= -1;
         }
         draw() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(99,102,241,${this.alpha})`;
-          ctx.fill();
+          ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(99,102,241,.35)'; ctx.fill();
         }
       }
-      for (let i = 0; i < 60; i++) particles.push(new Particle());
-      function animate() {
+      for (let i = 0; i < 70; i++) pts.push(new P());
+      (function loop() {
         ctx.clearRect(0, 0, w, h);
-        particles.forEach(p => { p.update(); p.draw(); });
-        // draw lines
-        for (let i = 0; i < particles.length; i++) {
-          for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 120) {
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = `rgba(99,102,241,${0.15 * (1 - dist / 120)})`;
-              ctx.lineWidth = 0.5;
-              ctx.stroke();
+        for (const p of pts) { p.update(); p.draw(); }
+        for (let i = 0; i < pts.length; i++)
+          for (let j = i + 1; j < pts.length; j++) {
+            const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 130) {
+              ctx.beginPath(); ctx.moveTo(pts[i].x, pts[i].y); ctx.lineTo(pts[j].x, pts[j].y);
+              ctx.strokeStyle = `rgba(99,102,241,${.12 * (1 - d / 130)})`; ctx.lineWidth = .6; ctx.stroke();
             }
           }
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
+        requestAnimationFrame(loop);
+      })();
     })();
   </script>
 </body>
