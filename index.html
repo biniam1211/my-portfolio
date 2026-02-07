@@ -4,208 +4,285 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title> Biniam Efrem </title>
+   <title>Biniam Efrem</title>
+   <link rel="icon" href="./assets/favicon.png" type="image/png">
    <link rel="stylesheet" href="styles.css">
    <script src="https://kit.fontawesome.com/b1b8fcb36d.js" crossorigin="anonymous"></script>
 </head>
+<body>
  <section id="landing-page">
     <nav>
         <figure>
-          <img id="persnal-logo" src="./assets/favicon.png" alt="">
+          <img id="personal-logo" src="./assets/favicon.png" alt="Biniam Efrem Logo">
         </figure>
         <ul class="nav__link--list">
-           
             <li class="nav__link">
-                <a href="#about" class="
-            nav__link--anchor
-        link__hover-effect
-        link__hover-effect--black"> About </a>
+                <a href="#about" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a>
             </li>
             <li class="nav__link">
-                <a href="#projects" class="
-            nav__link--anchor
-        link__hover-effect
-        link__hover-effect--black"> Projects </a>
+                <a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
             </li>
             <li class="nav__link">
-                <a href="#Contact" class="
-            nav__link--anchor
-        link__hover-effect
-        link__hover-effect--black"> Contact </a>
+                <a href="#contact" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
             </li>
-            <li class="nav__link click">
-                <a href="#" class="
-            nav__link--anchor
-        link__hover-effect
-        link__hover-effect--black">
-         <i class="fa-solid fa-circle-half-stroke"></i> </a>
+            <li class="nav__link click" id="theme-toggle">
+                <a href="#" class="nav__link--anchor" onclick="toggleTheme(); return false;">
+                 <i class="fa-solid fa-circle-half-stroke"></i>
+                </a>
             </li>
         </ul>
     </nav>
-    </section>
+
     <header class="header">
         <div class="header__content">
-            <h1 class="title"> Hey </h1>
-            <h1 class="title red"> I'm Biniam  </h1>
-            <section id="about">
-            <p class="header__para"> 
-                I'm a <b class= "red">Frontend Software Engineer</b> with a strong passion for building web applications with great user
-                 experiences.
-                <br>
-                Here's a bit more <b class="red"> about me.</b>
-             </p> 
-            </section>
-             <div class="social__list"> 
-                <a href="https://www.linkedin.com/in/biniam-efrem-910aab209/ " target="_blank" class="social__link click">
+            <h1 class="title">Hey</h1>
+            <h1 class="title accent">I'm Biniam</h1>
+            <p class="header__para">
+                I'm a <b class="accent">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences.
+            </p>
+             <div class="social__list">
+                <a href="https://www.linkedin.com/in/biniam-efrem-910aab209/" target="_blank" class="social__link click" aria-label="LinkedIn">
                  <i class="fa-brands fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/biniam1211" target="_blank" class="social__link click">
+                <a href="https://github.com/biniam1211" target="_blank" class="social__link click" aria-label="GitHub">
                     <i class="fa-brands fa-github"></i>
-                   </a>
-                   <a href="./assets/Biniam efrem Resume.pdf" class="social__link click">
+                </a>
+                <a href="./assets/Biniam efrem Resume.pdf" target="_blank" class="social__link click" aria-label="Resume">
                     <i class="fa-solid fa-file-pdf"></i>
-                   </a>
+                </a>
              </div>
         </div>
     </header>
-    <button class="mail__btn click">
+
+    <a href="mailto:biniamefrem1211@gmail.com" class="mail__btn click" aria-label="Send email">
         <i class="fa-sharp fa-solid fa-envelope"></i>
-    </button> 
-    <a href="#Project" class="scroll">
-        <div class="scroll__icon click"> </div> </a>  
+    </a>
+    <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+    </a>
  </section>
+
+ <section id="about">
+    <div class="container">
+        <div class="row">
+            <h1 class="section__title">
+                About <span class="accent">Me</span>
+            </h1>
+            <div class="about__content">
+                <p class="about__para">
+                    I'm a passionate Frontend Software Engineer who loves creating clean, responsive,
+                    and user-friendly web applications. I enjoy turning complex problems into simple,
+                    beautiful, and intuitive designs.
+                </p>
+                <p class="about__para">
+                    With experience in modern web technologies, I focus on writing clean,
+                    maintainable code and building applications that provide great user experiences.
+                    I'm always eager to learn new technologies and improve my skills.
+                </p>
+                <div class="about__skills">
+                    <h2 class="about__skills--title">My Tech Stack</h2>
+                    <div class="skills__list">
+                        <div class="skill">
+                            <i class="fa-brands fa-html5 skill__icon"></i>
+                            <span class="skill__name">HTML5</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-css3-alt skill__icon"></i>
+                            <span class="skill__name">CSS3</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-js skill__icon"></i>
+                            <span class="skill__name">JavaScript</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-react skill__icon"></i>
+                            <span class="skill__name">React</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-git-alt skill__icon"></i>
+                            <span class="skill__name">Git</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-github skill__icon"></i>
+                            <span class="skill__name">GitHub</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-npm skill__icon"></i>
+                            <span class="skill__name">npm</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-solid fa-terminal skill__icon"></i>
+                            <span class="skill__name">Terminal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
  <section id="projects">
     <div class="container">
         <div class="row">
-<h1 class="section__title">
-    Here  are some of my <span class="red"> Projects</span>
-</h1>
-<ul class="project__list">
-    <li class="project"> 
-        <div class="projrct__wrapper">
-            <img src="./assets/todolist.png" class="project__img" alt="">
-             <div class="project__description">
-                <h3 class="project__description--title">
-                    To do List Project 
-                  </h3>
-                  <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript,ES6
-                  </h4>
-                  <p class="project__description--para">
-            
-                A website which allows users to easily view and navigate their tasks 
-                 </p>
-                     <div class="project__description--links"> 
-                         <a href=" https://github.com/biniam1211/Generation_Todo_List_App" class="project__description--link">
-                            <i class="fa-brands fa-github"></i>
-                         </a>
-                         <a href="https://todolistapp-biniam1211.vercel.app/" class="project__description--link">
-                            <i class="fas fa-link"></i>
-                         </a>
-                     </div>
+            <h1 class="section__title">
+                Here are some of my <span class="accent">Projects</span>
+            </h1>
+            <ul class="project__list">
+                <li class="project">
+                    <div class="project__wrapper">
+                        <img src="./assets/todolist.png" class="project__img" alt="To Do List App screenshot">
+                        <div class="project__description">
+                            <h3 class="project__description--title">To Do List App</h3>
+                            <h4 class="project__description--sub-title">
+                                HTML, CSS, JavaScript, ES6
+                            </h4>
+                            <p class="project__description--para">
+                                A website which allows users to easily view, add, edit, and navigate their tasks.
+                                Features include task creation, completion tracking, and a clean user interface.
+                            </p>
+                            <div class="project__description--links">
+                                <a href="https://github.com/biniam1211/Generation_Todo_List_App" target="_blank" class="project__description--link">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://todolistapp-biniam1211.vercel.app/" target="_blank" class="project__description--link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                 </div>
                 </li>
-             </ul>
-             <ul class="project__list">
-                <li class="project"> 
-                    <div class="projrct__wrapper">
-                        <img src="./assets/calculator.png" class="project__img" alt="">
-                         <div class="project__description">
-                            <h3 class="project__description--title">
-                                calculator
-                              </h3>
-                              <h4 class="project__description--sub-title">
-                                HTML, CSS, JavaScript,ES6
-                              </h4>
-                              <p class="project__description--para">
-                        
-                                Basic Math Calculator
-                             </p>
-                                 <div class="project__description--links"> 
-                                     <a href="https://github.com/biniam1211/calculator.git" class="project__description--link">
-                                        <i class="fa-brands fa-github"></i>
-                                     </a>
-                                     <a href="https://calculator-mu-kohl.vercel.app/" class="project__description--link">
-                                        <i class="fas fa-link"></i>
-                                     </a>
-                                 </div>
-                                </div>
-                             </div>
-                            </li>
-                         </ul>
-             
+            </ul>
+            <ul class="project__list">
+                <li class="project">
+                    <div class="project__wrapper">
+                        <img src="./assets/calculator.png" class="project__img" alt="Calculator app screenshot">
+                        <div class="project__description">
+                            <h3 class="project__description--title">Calculator</h3>
+                            <h4 class="project__description--sub-title">
+                                HTML, CSS, JavaScript, ES6
+                            </h4>
+                            <p class="project__description--para">
+                                A fully functional math calculator with a modern interface. Supports basic
+                                arithmetic operations with a responsive design.
+                            </p>
+                            <div class="project__description--links">
+                                <a href="https://github.com/biniam1211/calculator.git" target="_blank" class="project__description--link">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://calculator-mu-kohl.vercel.app/" target="_blank" class="project__description--link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="project__list">
+                <li class="project">
+                    <div class="project__wrapper">
+                        <img src="./assets/favicon.png" class="project__img project__img--placeholder" alt="Portfolio website screenshot">
+                        <div class="project__description">
+                            <h3 class="project__description--title">Portfolio Website</h3>
+                            <h4 class="project__description--sub-title">
+                                HTML, CSS, JavaScript
+                            </h4>
+                            <p class="project__description--para">
+                                My personal portfolio website showcasing my projects, skills, and experience.
+                                Features dark mode toggle and responsive design.
+                            </p>
+                            <div class="project__description--links">
+                                <a href="https://github.com/biniam1211/my-portfolio" target="_blank" class="project__description--link">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    
-    <section id="Contact">
-        <div class="container">
-        <div class="row">
-<h1 class="section__title"><span class="red"> Contact Me</span>
-</h1>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Submit</button>
-          </form>
-    </section>
+ </section>
 
+ <section id="contact">
+    <div class="container">
+        <div class="row">
+            <h1 class="section__title">
+                <span class="accent">Contact Me</span>
+            </h1>
+            <p class="contact__para">
+                Have a question or want to work together? Feel free to reach out!
+            </p>
+            <form id="contact-form" action="mailto:biniamefrem1211@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+                <button type="submit" class="contact__btn">
+                    Send Message <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
  </section>
 
  <footer>
-    <div class="container"></div>
-    <div class="row footer__row">
-    <figure>
-        <img class="footer__logo--img" src="./assets/favicon.png" alt="">
-    </figure>
-
-    <div class="footer__social--list">
-    <a href="#" class="
-    footer__social-link 
-    liver__hover-effect=
-    link__hover-effect--white
-    "> 
-    Github</a>
-<a href="#" class="
-    footer__social-link 
-    liver__hover-effect
-    link__hover-effect--white
-    ">
-    
-</a>
-<a href="https://www.linkedin.com/in/biniam-efrem-910aab209/" target="_blank" class="
-footer__social-link 
-liver__hover-effect
-link__hover-effect--white
-">
-Linkedin
-</a>
-<a href="#" target="_blank" class="
-footer__social-link 
-liver__hover-effect
-link__hover-effect--white
-">
-Email
-</a>
-<a href="#" class="
-    footer__social-link 
-    liver__hover-effect
-    link__hover-effect--white
-    ">
-    Resume 
-</a>
-
-</div>
-<div class="footer__copyright"> Copyright © 2022 Biniam Efrem  </div>
-</div>
-</div>
+    <div class="container">
+        <div class="row footer__row">
+            <figure>
+                <img class="footer__logo--img" src="./assets/favicon.png" alt="Biniam Efrem Logo">
+            </figure>
+            <div class="footer__social--list">
+                <a href="https://github.com/biniam1211" target="_blank" class="footer__social-link link__hover-effect link__hover-effect--white">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/biniam-efrem-910aab209/" target="_blank" class="footer__social-link link__hover-effect link__hover-effect--white">
+                    LinkedIn
+                </a>
+                <a href="mailto:biniamefrem1211@gmail.com" class="footer__social-link link__hover-effect link__hover-effect--white">
+                    Email
+                </a>
+                <a href="./assets/Biniam efrem Resume.pdf" target="_blank" class="footer__social-link link__hover-effect link__hover-effect--white">
+                    Resume
+                </a>
+            </div>
+            <div class="footer__copyright">Copyright &copy; 2026 Biniam Efrem</div>
+        </div>
+    </div>
  </footer>
-</body>  
-</html>   
+
+ <script>
+    // Dark mode toggle
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        const icon = document.querySelector('#theme-toggle i');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-circle-half-stroke');
+            icon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-circle-half-stroke');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Load saved theme on page load
+    (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            const icon = document.querySelector('#theme-toggle i');
+            if (icon) {
+                icon.classList.remove('fa-circle-half-stroke');
+                icon.classList.add('fa-sun');
+            }
+        }
+    })();
+ </script>
+</body>
+</html>
